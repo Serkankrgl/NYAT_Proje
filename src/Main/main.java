@@ -10,5 +10,6 @@ public class main {
         DbContext.Connect();
         Menü menü = new Menü();
         menü.PrintMenü();
+        DbContext.Disconnect();
     }
 }

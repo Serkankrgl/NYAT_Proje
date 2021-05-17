@@ -15,6 +15,13 @@ public class DbContext {
             e.printStackTrace();
         }
     }
+    public static void Disconnect(){
+        try {
+            conn.close();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
     public static void CreateUser(User user){
         try{
             String Sql ="INSERT INTO \"public\".\"USER\" (\"USERNAME\",\"PASSWORD\",\"NAME\",\"SURNAME\",\"LOCATION\", \"ISLOCKED\" ) VALUES(?,?,?,?,?,?);";
